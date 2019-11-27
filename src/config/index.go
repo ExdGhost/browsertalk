@@ -13,14 +13,14 @@ var configModel *Model
 func Init() {
 
 	env := os.Getenv("TIER")
-	path := "config/tier" + env + ".json"
+	path := "config/tier/" + env + ".json"
 
 	bytes, err := ioutil.ReadFile(path)
 	if err != nil {
 		log.Fatal("Failed to bind config")
 	}
 
-	json.Unmarshal(bytes, configModel)
+	json.Unmarshal(bytes, &configModel)
 }
 
 // Get ...

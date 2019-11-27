@@ -1,7 +1,7 @@
 package main
 
-import "log"
+import "projects/browsertalk/src/initiate"
 
 func main() {
-	log.Println("Hi")
+	initiate.Start()
 }
